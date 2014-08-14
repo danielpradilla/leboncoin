@@ -1,0 +1,72 @@
+.control-label {
+	margin-top: 0.5em;
+}
+
+.explanation {
+	font-size:0.8em;
+}
+
+#results .title {
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+
+#results .panel-body > a {
+	color: #444;
+	text-decoration: none;
+	float:left;
+	margin:0 10px 15px 0;
+	height:126px;
+	float:left;
+	border: 1px solid #E8FDFF;
+	font-size: 0.85em;
+	border-radius: 3px;
+	padding: 3px 3px 0 0;
+}
+
+.lbc {
+
+}
+
+.lbc div {
+	display:inline;
+	float:left;
+	width:98px;
+}
+
+#results .clear, .lbc .nb {
+	display:none;
+}
+
+.lbc .date {
+	width:15px;
+	font-size:0.60em;
+}
+.lbc .date div {
+	/*margin-right:5px;*/
+	float:left;
+}
+
+.lbc .date div:last-child {
+	display:none;
+}
+
+.lbc .image {
+	background:#EFEFEF;
+	width:160px;
+	height:120px;
+	margin-right: 2px;
+}
+.lbc .placement, .lbc .price {
+	font-weight: bold;
+}
+
+.lbc .glyphicon-remove-circle {
+	color:#444;
+	float:right;
+	text-decoration: none;
+}
+
+
