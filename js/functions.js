@@ -5,12 +5,12 @@ mapsLink = function(text,label) {
 }
 
 populateCities = function() {
-	$('.postal-code').each(function(i) {
+	$('#results .postal-code').each(function(i) {
 		var code = $(this).text();
 		var url = 'http://api.zippopotam.us/FR/' + code;
-		console.log(url);
+		// console.log(url);
 		$.getJSON(url,function(json) {
-			console.log(json);
+			// console.log(json);
 			$.each(json.places, function(i,place){
 				$('#panel-'+code+' .city').append((i>0 ? ', ' :'') + mapsLink(place['place name']));
 			});
@@ -19,15 +19,14 @@ populateCities = function() {
 }
 
 linkPlaces = function(){
-	$('.placement').each(function(i) {
+	$('#results .placement').each(function(i) {
 		var name = $(this).text().trim();
 		$(this).append(mapsLink(name,'<span class="glyphicon glyphicon-search"></span>'));
 	});
 }
 
 appendRemovers = function() {
-	$('.lbc .date').after('<a href="#" class="glyphicon glyphicon-remove-circle"></a>');
-	$('.lbc .glyphicon-remove-circle').click(function(){
+	$('<a href="#" class="glyphicon glyphicon-remove-circle"></a>').insertAfter('#results .lbc .date').click(function(){
 		$(this).parents('a').remove();
 	});
 }
