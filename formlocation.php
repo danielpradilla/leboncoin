@@ -40,6 +40,7 @@
           Professionels
         </label>
     </div>
+    <input type="hidden" id="adtype" name="adtype" value="location">
     <button type="submit" class="btn btn-success">Chercher</button>
   </div>
 </form>

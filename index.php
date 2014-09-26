@@ -10,27 +10,42 @@
   </head>
   <body>
   	<div class="container">
-  		<div class="panel  panel-default">
-  			<div class="panel-body">
-		    	<?php include('searchform.php'); ?>
-		    </div>
-	    </div>
+    <!-- Nav tabs -->
+      <ul id="mytab" class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#location" role="tab" data-toggle="tab">Location</a></li>
+        <li><a href="#announces" role="tab" data-toggle="tab">Announces</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="location">
+            <div class="panel-body">
+              <?php include('formlocation.php'); ?>
+            </div>
+        </div>
+        <div class="tab-pane" id="announces">
+            <div class="panel-body">
+              <?php include('formannounces.php'); ?>
+            </div>
+        </div>
+      </div>
+      <hr/>
     </div>
     <div class="ad">
-            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-          <ins class="adsbygoogle"
-               style="display:inline-block;width:728px;height:90px"
-               data-ad-client="ca-pub-9174635424947693"
-               data-ad-slot="1244871139"></ins>
-          <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-          </script>
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- wide leaderboard -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-8199696010752089"
+           data-ad-slot="3189133856"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     </div>
     <div id="results" class="container">
 	    		<?php include('results.php') ?>
     </div>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/functions.js"></script>
     <?php if (file_exists('footer.php')) {
       include('footer.php');

@@ -38,4 +38,10 @@ $( document ).ready(function() {
 	populateCities();
 	linkPlaces();
 	appendRemovers();
+
+	$('#mytab a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	})
+
 });

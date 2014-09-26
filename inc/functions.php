@@ -48,10 +48,13 @@ function getResults() {
 
     $locations = split(',',getArg('location'));
 
+    $adtype = getArg('adtype') ? getArg('adtype') : 'location';
+
     foreach($locations as $location) {
     	$location=trim($location);
 	
-	    $urlEndpoint = 'locations/offres/?f=a&th=1'
+	    $urlEndpoint = $adtype.'/offres/?f=a&th=1'
+	    				.'&q='.getArg('q')
 	    				.'&mrs='.getArg('mrs')
 	    				.'&mre='.getArg('mre')
 	    				.'&location='.$location 
