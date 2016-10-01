@@ -18,7 +18,6 @@
 	text-decoration: none;
 	float:left;
 	margin:0 10px 15px 0;
-	height:126px;
 	float:left;
 	border: 1px solid #E8FDFF;
 	font-size: 0.85em;
@@ -26,47 +25,30 @@
 	padding: 3px 3px 0 0;
 }
 
-.lbc {
-
+#results .list_item {
+	clear: both;
+	width: 100%;
 }
 
-.lbc div {
-	display:inline;
-	float:left;
-	width:98px;
+.list_item .item_image {
+	float: left;
+	width: 20%;
 }
 
-#results .clear, .lbc .nb {
-	display:none;
+.list_item .item_infos {
+	float: left;
+	padding-left: 10px;
+    width: 80%;
 }
 
-.lbc .date {
-	width:15px;
-	font-size:0.60em;
-}
-.lbc .date div {
-	/*margin-right:5px;*/
-	float:left;
+.item_infos h2 {
+	margin-top: 0;
+	font-size: 2em;
 }
 
-.lbc .date div:last-child {
-	display:none;
-}
-
-.lbc .image {
-	background:#EFEFEF;
-	width:160px;
-	height:120px;
-	margin-right: 2px;
-}
-.lbc .placement, .lbc .price {
-	font-weight: bold;
-}
-
-.lbc .glyphicon-remove-circle {
-	color:#444;
-	float:right;
-	text-decoration: none;
+.item_infos .item_price {
+	float: right;
+    margin-top: -50px;
 }
 
 .ad {

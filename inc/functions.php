@@ -60,7 +60,7 @@ function getResults() {
 	    				.'&location='.$location 
 	    				. (getArg('f')!='' ? '&f='.getArg('f') : '');
 
-	    $selector = '.list-lbc';
+	    $selector = '.tabsContent ul li';
 
 	    $crawler = $goutte->request('GET', $baseURL . $urlEndpoint);
 

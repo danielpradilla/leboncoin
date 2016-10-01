@@ -22,7 +22,7 @@
     </div>
   </div>
   <div class="row">
-    <input type="hidden" id="adtype" name="adtype" value="announces">
+    <input type="hidden" id="adtype" name="adtype" value="annonces">
     <button type="submit" class="btn btn-success pull-right">Chercher</button>
   </div>
 </form>

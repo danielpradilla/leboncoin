@@ -31,6 +31,12 @@ appendRemovers = function() {
 	});
 }
 
+lazyloadImages = function() {
+	$('.lazyload').each(function(i, el){
+		console.log($(this));
+		$(this).append('<img src="'+$(this).data('imgsrc')+'"/>');
+	});
+}
 
 $( document ).ready(function() {
 	$( 'a[href^="http://"]' ).attr( 'target','_blank' );
@@ -42,6 +48,8 @@ $( document ).ready(function() {
 	$('#mytab a').click(function (e) {
 	  e.preventDefault()
 	  $(this).tab('show')
-	})
+	});
+
+	lazyloadImages();
 
 });

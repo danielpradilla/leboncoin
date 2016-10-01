@@ -13,7 +13,7 @@
     <!-- Nav tabs -->
       <ul id="mytab" class="nav nav-tabs" role="tablist">
         <li class="active"><a href="#location" role="tab" data-toggle="tab">Location</a></li>
-        <li><a href="#announces" role="tab" data-toggle="tab">Announces</a></li>
+        <li><a href="#annonces" role="tab" data-toggle="tab">Annonces</a></li>
       </ul>
       <div class="tab-content">
         <div class="tab-pane active" id="location">
@@ -21,9 +21,9 @@
               <?php include('formlocation.php'); ?>
             </div>
         </div>
-        <div class="tab-pane" id="announces">
+        <div class="tab-pane" id="annonces">
             <div class="panel-body">
-              <?php include('formannounces.php'); ?>
+              <?php include('formannonces.php'); ?>
             </div>
         </div>
       </div>

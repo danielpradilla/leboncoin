@@ -9,7 +9,7 @@
       <div class="col-md-3">
         <input type="text" class="form-control" id="mrs" name="mrs" placeholder="Mín" value="<?php echo getArg('mrs'); ?>">
       </div>
-      <label for="mre" class="col-md-1 control-label">y</label>
+      <label for="mre" class="col-md-1 control-label">et</label>
       <div class="col-md-3">
         <input type="text" class="form-control" id="mre" name="mre" placeholder="Máx" value="<?php echo getArg('mre'); ?>">
       </div>
