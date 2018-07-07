@@ -46,25 +46,25 @@ function getResults() {
 	$goutte = new Goutte\Client();
     $baseURL = 'http://www.leboncoin.fr/';
 
-    $locations = split(',',getArg('location'));
+    $cities = str_split(',',getArg('city'));
+    $category = getArg('category')!='' ? getArg('category') : '10';
 
-    $adtype = getArg('adtype')!='' ? getArg('adtype') : 'locations';
-
-    foreach($locations as $location) {
-    	$location=trim($location);
+    foreach($cities as $city) {
+    	$city=trim($city);
 	
-	    $urlEndpoint = $adtype.'/offres/?f=a&th=1'
-	    				.(getArg('q')!=''? '&q='.getArg('q') : '')
-	    				.'&mrs='.getArg('mrs')
-	    				.'&mre='.getArg('mre')
-	    				.'&location='.$location 
-	    				. (getArg('f')!='' ? '&f='.getArg('f') : '');
+	    $urlEndpoint = '/recherche/?'
+	    				.'category='.$category
+	    				.(getArg('text')!=''? '&text='.getArg('text') : '')
+	    				.'&price='.getArg('mrs').'-'.getArg('mre')
+	    				.'&cities='.$city;
 
-	    $selector = '.tabsContent ul li';
+	    echo($urlEndpoint);
+	    $selector = '.react-tabs__tab-panel ul li';
 
 	    $crawler = $goutte->request('GET', $baseURL . $urlEndpoint);
 
-	    $results[$location] = $crawler->filter($selector)->each(function ($node, $i) {
+	    $results[$city] = $crawler->filter($selector)->each(function ($node, $i) {
+	    	print $node->text()."\n";
 	        return $node;	// This is a DOMElement Object
 	    });
     }

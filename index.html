@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Le Bon Coin</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="author" href="humans.txt">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    </head>
+    <body onload="lbc.init()">
+        
+        <div class="container-fluid">
+			<div class="card">
+				<div class="card-body bg-light">
+					<form id="search_form">
+						<div class="form-row">
+						  	<div class="form-group col">
+						  		<label for="category">Category</label>
+					  		    <select id="category_id" name="category.id" class="form-control">
+							    </select>
+							</div>
+						  	<div class="form-group col">
+						  		<label for="location_city_zipcodes">Postal codes</label>
+						  		<textarea id="location_city_zipcodes" name="location.city_zipcodes" class="form-control" rows="3"></textarea>
+							</div>
+						</div>
+						<div class="form-row">
+							<div id="ranges_prices" class="col">
+								<div class="form-group">
+							  		<label for="ranges_price_min">Price min</label>
+									<input type="number" id="ranges_price_min" name="ranges.price.min" step="100" />
+								</div>
+								<div class="form-group">
+							  		<label for="ranges_price_max">Price max</label>
+									<input type="number" id="ranges_price_max" name="ranges.price.max" step="100" />
+								</div>
+							</div>
+							<div id="ranges_rooms" class="col">
+								<div class="form-group">
+							  		<label for="ranges_rooms_min">Rooms min</label>
+									<input type="number" id="ranges_rooms_min" name="ranges.rooms.min" step="1" />
+								</div>
+								<div class="form-group">
+							  		<label for="ranges_rooms_max">Rooms max</label>
+									<input type="number" id="ranges_rooms_max" name="ranges.rooms.max" step="1" />
+								</div>
+							</div>
+						</div>
+					  	<div class="form-group">
+					  		<label for="keywords_text">Keywords</label>
+					  		<input id="keywords_text" name="keywords.text" type="text" class="form-control"/>
+						</div>
+						<input class="btn btn-success" type="submit" value="Submit">
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+
+        <div id="results" class="container-fluid">
+        	Hello
+		</div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

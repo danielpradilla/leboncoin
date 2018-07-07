@@ -2,3 +2,4 @@ defaults.php
 footer.php
 vendor
 bower_components
+config.json

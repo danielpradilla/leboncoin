@@ -1,0 +1,6 @@
+{
+    "require": {
+    	"guzzlehttp/guzzle": "~6.3.3",
+        "fabpot/goutte": "~3.2.2"
+    }
+}
